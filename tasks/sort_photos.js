@@ -3,10 +3,11 @@ const path = require('path');
 
 function sortPhotos(sourceDir, dryRun) {
  
-  if (!fs.existsSync(sourceDir)) {
-    console.log('Source directory does not exist.');
-    return;
-  }
+if (!fs.existsSync(sourceDir) || !fs.statSync(sourceDir).isDirectory()) {
+  console.log('Source directory does not exist or is not a directory.');
+  process.exitCode = 1;
+  return;
+}  
 
   const destinationDir = './sorted';
   const allowedExtensions = ['.jpg', '.jpeg', '.png', '.heic', '.webp'];
@@ -14,7 +15,7 @@ function sortPhotos(sourceDir, dryRun) {
 
   for (let i = 0; i < files.length; i++) {
     const file = files[i];
-    const oldPath = path.join(sourceDir, file)
+    const oldPath = path.join(sourceDir, file);
     if (!fs.statSync(oldPath).isFile()) {
       continue;
     }
@@ -61,6 +62,5 @@ const dryRun = process.argv.includes('--dry-run');
 
 if (!sourceDir) {
   console.log('Usage: node sort_photos.js <source-directory> [--dry-run]');
-} else {
-  sortPhotos(sourceDir, dryRun);
+  process.exitCode = 1;
 }
