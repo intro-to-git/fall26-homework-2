@@ -63,4 +63,6 @@ const dryRun = process.argv.includes('--dry-run');
 if (!sourceDir) {
   console.log('Usage: node sort_photos.js <source-directory> [--dry-run]');
   process.exitCode = 1;
+}else {
+  sortPhotos(sourceDir,dryRun);
 }
