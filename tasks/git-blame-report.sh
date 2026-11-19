@@ -1,4 +1,3 @@
-
 #!/bin/bash
 
 # Check that a filename was provided
