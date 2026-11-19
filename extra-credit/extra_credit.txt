@@ -1,0 +1,28 @@
+Dear Professor Mikov,
+
+For the extra credit assignment ("Do something creative to demonstrate you are engaging with the course material"), I decided to build a local interactive search tool and study assistant directly on my fork of the course repository to help me prepare for the final exam.
+
+Repository: https://github.com/NikillerBG/intro-to-git.github.io/tree/main
+
+While reviewing the material, I realized that navigating across 13 lessons and 330+ presentation slides to find specific topics could be time-consuming. To make revision faster, I added:
+
+1. Keyword & Concept Slide Search (/search):
+  - Indexes all 330+ presentation slides and full lesson texts.
+  - Searches for specific commands, keywords, and concepts with typo tolerance.
+  - Deep-links directly to the exact Reveal.js presentation slide and provides quick inline previews.
+   This has been the most helpful feature for my revision, making it effortless to jump straight to the exact slide for topics like git rebase, bisect...
+
+2. Course Study Assistant (/agent):
+  - An interactive study tool that references the class notes and slides with direct citations.
+  - Includes a knowledge check quiz mode ("quiz me") to practice key exam concepts (Three Trees, fast-forward vs 3-way merges, Git internals).
+   (Note: While the built-in local course tutor works well offline for the predefined questions, connecting external AI APIs didn't really work as intended due to Google API issues, I only tried it with Gemini).
+
+Working on this on my fork also gave me a lot of practical hands-on experience experimenting with advanced Git functions we covered in class, such as branching, merging, soft resets, and rewriting commit history to clean up my branch. Given the scope of this project, I used an AI to help me implement and organize the code.
+
+All of your original curriculum, notes, and credits have been preserved intact. Building this project helped me engage much deeper with the course materials as I prepare for the final test.
+
+Thank you for the course!
+
+Best regards,
+Nikola Chingarov
+ID: 200307092
